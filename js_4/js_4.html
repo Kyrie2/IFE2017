@@ -11,7 +11,8 @@
 		text-align: center;
 		color: #fff;
 		background: rgba(0, 0, 0, .4);
-		margin: 10px; 
+		margin: 10px;
+		overflow: hidden;
 	}
 	</style>
 </head>
@@ -50,6 +51,9 @@
 		if(box.children.length < 1) return;
 		box.removeChild(box.lastElementChild);
 	};
+	box.addEventListener('click', function(e) {
+		box.removeChild(e.target);
+	});
 
 	function createNode() {
 		var text = ipt.value;
