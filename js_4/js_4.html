@@ -34,10 +34,12 @@
 
 	LI.onclick = function() {
 		var node = createNode();
+		if(!/\S/.test(node.innerText)) return;
 		box.insertBefore(node, box.firstChild);
 	};
 	RI.onclick = function() {
 		var node = createNode();
+		if(!/\S/.test(node.innerText)) return;
 		box.appendChild(node);
 	};
 	LO.onclick = function() {
